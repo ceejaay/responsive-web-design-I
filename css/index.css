@@ -1,526 +1,571 @@
-/* this is for responsive web design */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
-* {
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
-}
-
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-
-}
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
-
-html, body {
-    height: 100%;
-    font-family: 'Titillium Web', sans-serif;
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
 }
 
-h1, h2, h3, h4, h5 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Your code starts here! */
+
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");
+
+@media (max-width: 800px) {
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
 }
 
 .container {
-  width: 880px;
-  /* TB LR */
+  width: 800px;
   margin: 0 auto;
 }
 
-/* .services { */
-/*   width: 880px; */
-/*   margin: 0 auto; */
-/* } */
-
-/* header */
-
-header nav {
-  width: 691px;
-  /* vertical-align: top; */
-  /* margin-top: 35px; */
-}
-
-header nav a {
-  margin-right: 65px;
-  font-size: 14px;
-  color: gray;
-  text-decoration: none;
-}
-
-header nav a:hover {
-  text-decoration: underline;
-}
-
-header nav a:first-child {
-  /* margin-left: 0; */
-}
-
-header nav a:last-child {
-  /* margin-right: 0; */
-}
-
-header .logo {
-  /* margin-top: 25px; */
-}
-
-/* cta */
-.index-cta {
-  width: 100%;
-}
-
-.index-cta .index-cta-text {
-  /* font-size: 77px; */
-  /* margin-top: 120px; */
-  /* text-align: center; */
-  /* padding: 0px 75px; */
-}
-
-.index-cta .index-cta-text button {
-  background: white;
-  vertical-align: top;
-  margin-top: 6px;
-  padding: 8px 44px;
-  font-size: 17px;
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-
-.index-cta .index-cta-text button:hover {
-  background: black;
-  color: white;
-}
-
-.index-cta img {
-  margin-top: 69px;
-}
-
-/* this is for index */
-.index-top-content {
-}
-.index-main-content {
-}
-/* .main-content .top-content { */
-/*   display: flex; */
-/*   justify-content: center; */
-/*   padding: 0 10px; */
-/*   border: 5px pink dashed; */
-/* } */
-
-.index-top-content .text-content {
-}
-
-.index-main-content .text-content {
-}
-/*index */
-/* .main-content .top-content .text-content { */
-/*   width: 200px; */
-/*   margin-right: 34px; */
-/*   border: 10px lime dashed; */
-/* } */
-
-.index-footer {
-}
-
-
-
-
-
-
-
-
-
-/* only services page stuff below this line*/
-
-/* the main services container */
-.services {
-  width: 880px;
-  /* TB LR */
+.contain-service {
+  width: 800px;
   margin: 0 auto;
-
 }
 
-.services-top-content-section {
-  display: flex; 
-  flex-wrap: wrap;
-  justify-content: space-between;
-
-
-}
-
-
-.services-header-img {
-  margin-top: 30px;
-  width 100%;
-}
-
-.services-top-content-text {
-  width: 100%;
-  /* trbl */
-  margin: 40px 0 40px 0;
-}
-
-.services-top-content-text h1 {
-  font-size: 36px;
-}
-
-.services-main-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /*justify-content: space-between;*/
-  border-top: 1px solid black;
-  padding-top: 40px;
-}
-
-.services-text-cards {
-  background: whitesmoke;
-  width: 380px;
-  /*trbl*/
-  margin: 20px 20px 40px 35px;
-  border: 1px black solid;
-  line-height: 20px;
-  padding: 20px;
-
-}
-
-.services-text-cards button {
-  width: 150px;
-  height: 35px;
-  background: white;
-  border-radius: 5px;
-  border: solid 1px black;
-  /* trbl */
-  margin: 25px 0 10px 0; 
-
-}
-.services-text-cards button:hover {
-  background: black;
-  color: white;
-
-}
-.services-bottom-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  /*trbl*/
-  padding: 50px 0 50px; 0;
-  border-top: black 1px solid;
-}
-
-.services-bottom-text {
-  width: 420px;
-  height: 150px;
-  line-height: 20px;
-}
-
-.services-info-img {
-}
-
-.services-text-list {
-  height: 160px;
-  width: 170px;
-  padding: 20px;
-}
-
-.services-text-list ul li {
-  list-style: square;
-  padding: 5px;
-}
-.services-footer {
-  text-align: center;
-}
-
-
-
-/* anything less than the max width will change to what have in the @media tag */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   body {
-    /* background: lightblue; */
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
-
-  .container {
-    width: 800px;
-    padding: 20px;
-  }
-
-  .index-logo{
-    display: flex;
-    justify-content: center;
-
-    width: 100%;
-    margin: 25px 0;
-  }
-
-
-  .fixed-nav header nav {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%
-  }
-
-  /* header { */
-  /*   width 100%; */
-  /* } */
-
-  .fixed-nav a {
-    text-decoration: none;
-    width: 100%;
-  }
-
-  .index-cta-text {
-    font-size: 77px;
-  border: dotted green 8px;
-
-  }
-
-  .index-cta {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    padding: 75px;
-  }
-
-  .index-cta img {
-    display: none;
-   }
-
-  .index-cta  button {
-    border: solid black 1px;
-    background: white;
-    font-size: 20px;
-    width: 190px;
-    height: 35px;
-
-   }
-
-  .index-cta-text {
-    font-size: 70px;
-    text-align: center;
-    margin: 20px 0px;
-  }
-
-  .index-top-content {
-    display: flex;
-    justify-content: space-between;
-    width: 800px;
-    padding: 20px;
-    border-top: solid black 1px;
-  }
-
-  .index-top-content .text-content{
-    width: 350px;
-    padding: 20px;
-  }
-
-  .index-middle-image {
-    width: 100%;
-  }
-
-  .index-main-content {
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-between; */
-    justify-content: center;
-    width: 800px;
-  }
-
-  .index-main-content .text-content {
-    width: 225px;
-    margin: 30px;
-  }
-
-  .index-footer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 50px;
-    border-top: black solid 1px;
-  }
-
-  .index-footer address {
-    line-height: 0.5;
-    width: 175px;
-    margin: 40px 0px;
-  }
-
-  .index-footer h1 {
-    margin-top: 40px;
-  }
-
-  .index-footer .index-copyright {
-    text-align: center;
-  }
-  /* 4 values => TRBL is one value for all sides. */
-  /* 3 values => T RL B */
-  /* 2 values =>  TB RL is two values. The first for top/bottom the second right left */
-  /* 1 value covers all four sides */
-
-}
-
-@media (max-width: 500px ) {
 
   .container {
     width: 500px;
   }
 
-  header {
-    width: 100%;
+  .contain-service {
+    width: 500px;
   }
-
-  nav {
-    width: 100%;
-    /* border-bottom: black solid 1px; */
-  }
-
-  .fixed-nav {
-    display: flex;
-    justify-content: center;
-    /* flex-direction: column; */
-    width: 100%;
-  }
-
-  .fixed-nav header nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .index-logo {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  .index-links {
-    display: flex;
-    border-top: black 1px solid;
-    flex-direction: column;
-    width: 100%;
-
-  }
-  /* .fixed-nav a { */
-  /*   text-decoration: none; */
-  /*   width: 100%; */
-  /* } */
-
-  .fixed-nav a {
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid black;
-    margin: 0px 0px;
-    text-decoration: none;
-    padding: 20px;
-
-  }
-
-  .index-cta-text {
-
-  }
-
-  .index-cta button {
-    background: white;
-  }
-
-  .index-cta img {
-    display: none;
-  }
-
-  .index-top-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    /* border-top: black solid 2px; */
-  }
-
-  .index-top-content .text-content {
-    width: 100%;
-  }
-
-  .index-middle-image {
-    width: 100%;
-  }
-
-  .index-main-content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .index-main-content .text-content {
-    width: 100%;
-  }
-
-  .index-footer {
-    width: 100%;
-  }
-
-
 }
 
+nav {
+  margin: 10px;
+  text-align: center;
+  background: white;
+  padding-bottom: 5px;
+  z-index: 1;
+  width: 800px;
+}
 
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a {
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: black;
+  text-decoration: none;
+  padding: 4px 20px;
+  text-align: center;
+  border-radius: 50px;
+  transition: background 1s ease, color 0.5s ease, border-radius 0.5s ease;
+}
+
+nav a:hover {
+  color: white;
+  background: black;
+  border-radius: 0;
+  box-shadow: 0 8px 6px -6px gray;
+  cursor: pointer;
+}
+
+@media (max-width: 800px) {
+  nav {
+    margin-top: 110px;
+    display: flex;
+    text-align: center;
+    width: 800px;
+  }
+  nav a {
+    padding: 5px 37px;
+  }
+
+  nav a:hover {
+    color: inherit;
+    background: inherit;
+    box-shadow: 0 0px 0px 0px transparent;
+  }
+}
+
+@media (max-width: 500px) {
+  nav {
+    width: 100%;
+    height: 400px;
+    padding: 0;
+    margin: 5px auto;
+    position: relative;
+    top: 72px;
+  }
+
+  nav ul {
+    display: inline-block;
+    width: 100%;
+  }
+
+  nav a {
+    border-radius: 0px;
+    line-height: 60px;
+    font-size: 19px;
+  }
+
+  nav li {
+    border-top: 1px solid black;
+  }
+}
+
+.logo {
+  vertical-align: text-bottom;
+  width: 150px;
+  padding-left: 10px;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    position: relative;
+    top: -78px;
+    left: -476px;
+    width: 195px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    position: relative;
+    top: -423px;
+    left: -5px;
+  }
+}
+
+header {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+header img {
+  width: 300px;
+  height: 300px;
+}
+
+@media (max-width: 800px) {
+  header img {
+    display: none;
+  }
+}
+
+header H1 {
+  font-size: 45px;
+  padding: 20px;
+  align-content: center;
+  margin-top: 60px;
+}
+
+@media (max-width: 800px) {
+  header h1 {
+    font-size: 80px;
+    padding: 0;
+    position: relative;
+    top: -80px;
+    width: 300px;
+    left: -10px;
+    height: 250px;
+  }
+}
+
+@media (max-width: 500px) {
+  header h1 {
+    position: relative;
+    top: -40px;
+  }
+}
+
+header H1 A {
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+  transition: background 1s ease, color 0.5s ease;
+  box-shadow: 0 8px 6px -6px gray;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+}
+
+header H1 A:hover {
+  background-image: linear-gradient(to bottom, rgb(105, 105, 105), black);
+  color: white;
+  cursor: pointer;
+}
+
+.services-header-img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .services-header-img {
+    width: 90%;
+  }
+}
+
+.imgserv {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .imgserv {
+    text-align: center;
+  }
+  .services-header-img {
+    visibility: hidden;
+  }
+}
+
+.top-services {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding: 20px;
+}
+
+.top-services H1 {
+  font-size: 25px;
+}
+
+@media (max-width: 500px) {
+  .top-services {
+    margin-top: -40px;
+    font-size: 18px;
+  }
+}
+
+.box-rows {
+  width: 850px;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.boxtop {
+  width: 400px;
+  padding: 20px;
+}
+
+.mid-box {
+  text-align: center;
+}
+
+.middle-img {
+  width: 100%;
+}
+
+@media (max-width: 800px) {
+  .middle-img {
+    width: 90%;
+  }
+}
+
+.boxbottom {
+  width: 270px;
+  padding: 20px;
+}
+
+@media (max-width: 800px) {
+  .box-rows {
+    width: 800px;
+    justify-content: space-around;
+  }
+
+  .boxtop {
+    width: 350px;
+    padding: 30px;
+  }
+
+  .boxbottom {
+    width: 200px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .box-rows {
+    display: inline-block;
+  }
+
+  .boxtop {
+    width: 500px;
+  }
+
+  .boxbottom {
+    width: 500px;
+    padding: 30px;
+  }
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
+@media (max-width: 800px) {
+  hr {
+    width: 90%;
+  }
+}
+
+#contact {
+  padding-top: 30px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 800px) {
+  #contact {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  #contact {
+    padding-left: 30px;
+  }
+}
+
+.card-rows {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  flex: 0 45%;
+  margin: 10px;
+  height: 220px;
+  background-color: rgb(236, 236, 236);
+  border: 1px solid black;
+}
+
+.cards a {
+  text-decoration: none;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 12px;
+  background: white;
+  color: black;
+}
+
+.cards h1 {
+  margin: 10px;
+}
+
+.cards p {
+  padding: 10px 10px;
+}
+
+@media (max-width: 500px) {
+  .card-rows {
+    width: 500px;
+    display: inline-block;
+  }
+
+  .cards {
+    width: 470px;
+  }
+
+  .cards a {
+    float: right;
+    font-size: 20px;
+  }
+}
+
+.facts {
+  margin-top: 20px;
+  display: flex;
+}
+
+.facts ul {
+  list-style-type: square;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.facts-rows {
+  margin: 20px;
+}
+
+@media (max-width: 500px) {
+  .facts {
+    width: 500px;
+    display: inline-block;
+  }
+
+  .facts-rows {
+    width: 470px;
+  }
+
+  .facts img {
+    visibility: hidden;
+  }
+}
+
+footer {
+  text-align: center;
+}
 
